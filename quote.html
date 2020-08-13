@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title></title>
+	<style type="text/css">
+		.container{
+			margin: 150px 60px 200px 500px;
+			padding: 20px 60px 20px 60px;
+			background-color: #00CACA;
+			border-radius: 10px;
+			box-shadow: 14px;
+		}
+		.quote{
+			/*padding-top: 100px;
+			margin-left: 80%;*/
+			float:left bottom;
+			margin-top: 30px;
+		}
+		#quote{
+			padding-top: 50px;
+			border-radius: 30px;
+			color: #fff;
+			text-align: center;
+			margin-left: 10%;
+			background-color: #484891;
+			font-size: x-large;
+			text-decoration-color: #EBD3E8;
+		}
+		#author{
+			border-radius: 30px;
+			color: #fff;
+			margin-left: 70%;
+			background-color: #7373B9;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+	var content = []
+		function add(){
+			var msg = document.querySelector("#name").value + "<br>"
+			content.push(msg)
+			document.querySelector("#list").innerHTML = content
+			//alert(name)
+		}
+		var quotes = [
+		{
+			quote:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+		author:"M"
+		},
+		{
+			quote:" Duis aute irure dolor in reprehenderit in voluptate velit esse",
+		author:"N"},
+		{
+			quote:" Excepteur sint occaecat cupidatat non",
+		author:"S"},
+		{
+			quote:"The 8th of November jdjhfahfayefaak ",
+		author:"R"},
+		{
+			quote:" The greater the pride, the harder the fall.",
+		author:"T"},
+		{
+			quote:"If you don't fail , then you're not even trying",
+		author:"U"},
+		]
+
+		function quote(){
+			var random = Math.floor((Math.random()*5)+1)
+			//alert(random)
+			document.querySelector("#quote").innerHTML = quotes[random].quote
+			document.querySelector("#author").innerHTML = quotes[random].author
+		}
+</script>
+	
+
+<div class="container shadow p-30 m-40">
+
+	<!-- <div> -->
+		<!-- <form> -->
+		<!-- <input type="text" name="" width="" size="30" id="name"> -->
+		<!-- <input onclick="add()" class="btn btn-danger" value="add"> -->
+		<!--<button class="btn btn-primary" onclick="add()">add</button>-->
+	<!-- </form> -->
+	<!-- </div> -->
+	<div style="width: 80%;height: 200px; border: 1px solid grey;" id="quote">
+			
+	</div>
+	<br>
+	<div style="width: 30%;height: 30px; border: 1px solid grey;" id="author">
+		
+	</div>
+
+	<div class="quote text-left">
+		<input onclick="quote()" class="btn btn-danger" value="quote">
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</body>
+</html>
